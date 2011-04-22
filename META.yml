@@ -1,7 +1,7 @@
 --- #YAML:1.0
 name:               URI-Dispatch
-version:            v0.5
-abstract:           ~
+version:            v1
+abstract:           determine which code to execute based upon path
 author:
     - Mark Norman Francis <norm@cackhanded.net>
 license:            unknown
@@ -11,9 +11,11 @@ configure_requires:
 build_requires:
     ExtUtils::MakeMaker:  0
 requires:
+    HTTP::Message:    0
     Modern::Perl:     0
     MooseX::Declare:  0
-    Ouch:             0.03
+    Ouch:             0
+    Plack:            0
     version:          0
 no_index:
     directory:
