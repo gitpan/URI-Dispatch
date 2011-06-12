@@ -10,8 +10,8 @@ use URI::Dispatch;
     package Homepage;
     
     sub get {
-        my $options = shift;
         my $request = shift;
+        my $options = shift;
         
         return [ 200, [], [ "Hello world!" ] ];
     }
@@ -21,21 +21,21 @@ use URI::Dispatch;
     use Test::More;
     
     sub get {
-        my $options = shift;
         my $request = shift;
+        my $options = shift;
         
         return [ 200, [], [ 'Article ' . $options->{'title'} ] ];
     };
     sub post {
-        my $options = shift;
         my $request = shift;
+        my $options = shift;
         
         ok( $request->param('comment') eq 'Meh.' );
         return [ 200, [], [ 'Comment added to ' . $options->{'title'} ] ];
     }
     sub delete {
-        my $options = shift;
         my $request = shift;
+        my $options = shift;
         
         return [ 403, [], [ 'Cannot delete ' . $options->{'title'} ] ];
     }
