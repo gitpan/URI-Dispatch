@@ -23,6 +23,11 @@ class URI::Dispatch::Route {
         lazy    => 1,
         builder => 'build_match',
     );
+    has name => (
+        isa      => 'Str',
+        is       => 'ro',
+        required => 0,
+    );
     
     my $STRIP_ARGS = qr{
         ^
@@ -33,6 +38,7 @@ class URI::Dispatch::Route {
                     (?: (?'name' \w+ ) : )?
                     (?:
                              (?'anything' \*      )
+                        |    (?'nothing'  0       )
                         |    (?'builtin'  \w+     )
                         | \( (?'regexp'   [^\)]+  ) \)
                     )
@@ -267,5 +273,8 @@ class URI::Dispatch::Route {
     }
     method param_anything {
         return '.+?';
+    }
+    method param_nothing {
+        return '.{0}';
     }
 }
