@@ -1,6 +1,6 @@
 --- #YAML:1.0
 name:               URI-Dispatch
-version:            v1.3
+version:            v1.4
 abstract:           determine which code to execute based upon path
 author:
     - Mark Norman Francis <norm@cackhanded.net>
