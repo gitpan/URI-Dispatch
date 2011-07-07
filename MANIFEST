@@ -17,4 +17,4 @@ t/dispatch_args.t
 t/ordering.t
 t/plack.t
 t/plack_args.t
-META.yml                                 Module meta-data (added by MakeMaker)
+META.yml

@@ -1,5 +1,9 @@
 Revision history for URI::Dispatch.
 
+1.4.1   Jul 07 2011
+
+    -   Bugfix for the PAUSE indexer, no user changes.
+
 1.4     Jul 05 2011
 
     -   Pass path and method as named arguments to dispatch.

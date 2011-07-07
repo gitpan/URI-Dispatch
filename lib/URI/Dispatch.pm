@@ -5,7 +5,7 @@ class URI::Dispatch {
     use Ouch        qw( :traditional );
     use URI::Dispatch::Route;
     use version;
-    our $VERSION = qv( 1.4 );
+    our $VERSION = qv( 1.4.1 );
     
     has routes => (
         isa     => 'HashRef',
